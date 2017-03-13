@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Git & Github</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="container">
+
+    <header class="masthead">
+  <h1 class="masthead-title">
+    <a href="/">Ral Oliver - Frontend Developer<span>&#39;s blog</span></a>
+  </h1>
+  <!--<nav class="masthead-nav">
+    
+      
+    
+      
+    
+      
+        <a href="/english-path">English (livros e cursos)</a>
+      
+    
+      
+        <a href="/git-github">Git & Github</a>
+      
+    
+      
+    
+  </nav>-->
+</header>
+
+    
+
+
+
+<article class="content post">
+    <h1 class="post-title">Git & Github</h1>
+    <div class="post-date">
+        <time>17 Feb 2017</time>
+        <span class="reading-time" title="Estimated read time"> - 4 minutes to read</span>
+    </div>
+
+    
+
+
+<p ><span >Git &amp; GitHub</span></p><p ><span ></span></p><p ><span>Principais comandos do terminal: </span><span ><a  href="https://www.google.com/url?q=https://goo.gl/DqpEBa&amp;sa=D&amp;ust=1489381456049000&amp;usg=AFQjCNHONU419umSp2J469upBqhzU1YhBQ">https://goo.gl/DqpEBa</a></span></p><p ><span ><a  href="https://www.google.com/url?q=https://goo.gl/DqpEBa&amp;sa=D&amp;ust=1489381456050000&amp;usg=AFQjCNFHb9s44WjrdQWYXimA9EwTSbgooQ"></a></span></p><p ><span >Git: trabalha com os estados dos arquivos (outros sistemas trabalham com as diferen&ccedil;as)</span></p><p ><span ></span></p><p ><span>Snapshots: estados dos arquivos, todos os estados levam os arquivos daquele momento. </span><span ><a  href="https://www.google.com/url?q=http://easycaptures.com/3419459554&amp;sa=D&amp;ust=1489381456052000&amp;usg=AFQjCNFCNErBnfZ3bWSgRIUY2TgQb4Hcww">http://easycaptures.com/3419459554</a></span><span >.</span></p><p ><span ></span></p><p ><span >Hist&oacute;ria (linus torvalds): bitkeeper; mesmo criador do linux (indigna&ccedil;&atilde;o); melhorias: velocidade, design, n&atilde;o linear, grandes projetos.</span></p><p ><span ></span></p><p ><span >CONFIGURATION</span></p><p ><span >git.config, git.config.user and git.config.project</span></p><p ><span>- git config --global </span><span ><a  href="https://www.google.com/url?q=http://user.name&amp;sa=D&amp;ust=1489381456056000&amp;usg=AFQjCNHAVSOX60g3LMoNZJD1kuYBGGv0eQ">user.name</a></span><span >&nbsp;&quot;Ral Oliver&quot;</span></p><p ><span ></span></p><p ><span>CICLO DE VIDA DOS STATUS DOS ARQUIVOS (</span><span ><a  href="https://www.google.com/url?q=https://goo.gl/HrS4LF&amp;sa=D&amp;ust=1489381456057000&amp;usg=AFQjCNES2rsF4z3EFa2E8Mntlp4a0cCuUA">https://goo.gl/HrS4LF</a></span><span >)</span></p><p ><span >- untracked (n&atilde;o marcado): arquivo acabou de ser adicionado, mas n&atilde;o visto pelo git</span></p><p ><span >- unmodified: existe, mas n&atilde;o foi modificado</span></p><p ><span >- modified: arquivo modificado</span></p><p ><span >- staged: &aacute;rea pra onde ser&aacute; criada vers&atilde;o</span></p><p ><span>- commit: pegue todos os arquivos staged e crie uma imagem, snapshot, uma vers&atilde;o git commit -m &quot;Add </span><span ><a  href="https://www.google.com/url?q=http://readme.md&amp;sa=D&amp;ust=1489381456061000&amp;usg=AFQjCNGAl9IsVflvw_ataUpFtBtsH4kNCw">readme.md</a></span><span >&quot;</span></p><p ><span >- git status, git add, git log, git log decorate, git log --author=&quot;Oliver&quot;, git shortlog, git shortlog -sn, git log --graph, git show, git diff, git diff --name-only, git commit -am, git reset</span></p><p ><span ></span></p><p ><span >VOLTAR A VERS&Atilde;O</span></p><p ><span >- git checkout (voltar o que foi feito antes sem commit)</span></p><p ><span >- git reset HEAD (remover do stage)</span></p><p ><span >- DEU RUIM: commitei e preciso voltar (volte sempre o commit anterior ao desejado)</span></p><p ><span >- git reset --soft: voltar o commit e o arquivo fica em stage</span></p><p ><span >- git reset --mixed: voltar o commit e o arquivo fica em modified</span></p><p ><span >- git reset --hard: ignorar a exist&ecirc;ncia do commit e das altera&ccedil;&otilde;es (MUITO CALMA NESSA ALMA)</span></p><p ><span ></span></p><p ><span >GITHUB</span></p><p ><span>git remote add origin </span><span ><a  href="https://www.google.com/url?q=https://github.com/raloliver/githando.git&amp;sa=D&amp;ust=1489381456070000&amp;usg=AFQjCNFDjGeJg1-7DfA7hRJhQmd2C4UicQ">https://github.com/raloliver/githando.git</a></span></p><p ><span >- origin nome default pra origem do remoto</span></p><p ><span >git push -u origin master (trackear repositorio)</span></p><p ><span >- num primeiro momento &eacute; interessante usar tudo com -u para nas pr&oacute;ximas vezes digitar apenas gut push</span></p><p ><span >git remote -v</span></p><p ><span >- mais detalhes da origem do reposit&oacute;rio remoto</span></p><p ><span >git pull</span></p><p ><span >- atualizar remote</span></p><p ><span ></span></p><p ><span >master: brunch inicial</span></p><p ><span >git clone: url SSH para clonar o repo local, n&atilde;o pode modificar e realizar push</span></p><p ><span >fork: fazer uma copia pra depois enviar as modifica&ccedil;&otilde;es (pull-request)</span></p><p ><span ></span></p><p ><span >BRANCH</span></p><p ><span >um ponteiro movel que leva um commit. pra cada hash, &eacute; criada um snapshot e o branch aponta para um determinado commit, que inicialmente se chama master.</span></p><p ><span>e um novo branch pode apontar para um mesmo commit, ou voc&ecirc; pode ter um novo branch apontando para um novo commit (</span><span ><a  href="https://www.google.com/url?q=http://easycaptures.com/4388317726&amp;sa=D&amp;ust=1489381456078000&amp;usg=AFQjCNFkLmCf5rmU-w9RcWg_VrpMV7i7vw">http://easycaptures.com/4388317726</a></span><span >)</span></p><p ><span >vantagens: modificar sem alterar o master / facilmente deslig&aacute;vel / melhor para equipes / evita conflitos e posso trabalhar com o mesmo arquivo.</span></p><p ><span >- git checkout -b israel (cria&ccedil;&atilde;o do brunch) - git branch (lista) - git checkout master (entra)</span></p><p ><span >DELETAR BRUNCH git branch -D branch-name</span></p><p ><span ></span></p><p ><span >MERGE (cria um commit novo, pra unir as diferen&ccedil;as)</span></p><p ><span>exemplo de merge: </span><span ><a  href="https://www.google.com/url?q=http://easycaptures.com/4825685558&amp;sa=D&amp;ust=1489381456082000&amp;usg=AFQjCNERYej1DcRsdJ06sRXRDdMim_9Hzg">http://easycaptures.com/4825685558</a></span><span>&nbsp;e </span><span ><a  href="https://www.google.com/url?q=http://easycaptures.com/3984703625&amp;sa=D&amp;ust=1489381456083000&amp;usg=AFQjCNFMekABK-ZCTl_Jlid5HZ_5CHoY1A">http://easycaptures.com/3984703625</a></span><span >&nbsp;(ciclo da forma diamante, [v&eacute;rtice])</span></p><p ><span >PRO: merge &eacute; uma opera&ccedil;&atilde;o n&atilde;o destrutiva</span></p><p ><span >CONTRA: merge precisa de um commit extra e deixa o hist&oacute;rico polu&iacute;do</span></p><p ><span ></span></p><p ><span >REBASE (joga as mudan&ccedil;as para o in&iacute;cio da fila)</span></p><p ><span>exemplo de rebase: </span><span ><a  href="https://www.google.com/url?q=http://easycaptures.com/4814535745&amp;sa=D&amp;ust=1489381456086000&amp;usg=AFQjCNFeimxM3fr5G9rEzj_m1xUwddlFHQ">http://easycaptures.com/4814535745</a></span><span>&nbsp;e </span><span ><a  href="https://www.google.com/url?q=http://easycaptures.com/2156899863&amp;sa=D&amp;ust=1489381456096000&amp;usg=AFQjCNGUD4ABx1WCGKutr8GSumQ76LB_AQ">http://easycaptures.com/2156899863</a></span><span >&nbsp;(fast-forward) git pull --rebase</span></p><p ><span >PRO: rebase evita o commit extra e permanece o hist&oacute;rico linear</span></p><p ><span >CONTRA: perda da ordem cronol&oacute;gica por conta da mudan&ccedil;a de hist&oacute;rico</span></p><p ><span ></span></p><p ><span >MERGE x REBASE</span></p><p ><span >evite o chamado &quot;guitar-hero&quot; usando o merge, preferencialmente use o rebase.</span></p><p ><span >- git merge branch-name</span></p><p ><span ></span></p><p ><span >GIT STASH</span></p><p ><span >- Respons&aacute;vel por guardar num arquivo, modifica&ccedil;&otilde;es que ainda n&atilde;o foram commitadas e que eu posso chamar depois.</span></p><p ><span >- git stash (WIP: work in progress)</span></p><p ><span >- git stash apply</span></p><p ><span ></span></p><p ><span >ALIAS</span></p><p ><span >- git config --global alias.s status</span></p><p ><span ></span></p><p ><span >TAGS</span></p><p ><span >- Delimitador com base em v&aacute;rios commits ou em novas vers&otilde;es que foram criadas.</span></p><p ><span >- Geralmente utilizado para dar nome as vers&otilde;es.</span></p><p ><span >- git tag -a 0.0.1 -m &quot;Beta Tester&quot;</span></p><p ><span >- git push origin master --tags</span></p><p ><span >- git tag</span></p><p ><span >- git blame: altera&ccedil;&atilde;o linha a linha, quem fez e qual arquivo foi alterado, se o arquivo foi renomeado, data de altera&ccedil;&atilde;o e o que foi alterado.</span></p><p ><span ></span></p><p ><span >GIT REVERT</span></p><p ><span >- Busque o commit que deu problema em produ&ccedil;&atilde;o e volte a vers&atilde;o anterior usando o git revert hashdocomittquedeuruim</span></p><p ><span ></span></p><p ><span >APAGAR TAGS E OUTROS NO REPOSITORIO REMOTO</span></p><p ><span >- git tag -d 1.0.1</span></p><p ><span >- git push origin:.1.0.1</span></p><p ><span >- git push origin: test</span></p><p ><span ></span></p><p ><span >GIT FLOW</span></p><p ><span >- &eacute; uma extens&atilde;o no git</span></p><p ><span >- dois branches prim&aacute;rios: master (em produ&ccedil;&atilde;o, [apenas pra merge]) e develop (para testes, [merge futuro para master])</span></p><p ><span >- branches com ciclo de vida curtos: features, releases, hotfixes, bugfixes, supports.</span></p><p ><span>- </span><span ><a  href="https://www.google.com/url?q=https://github.com/nvie/gitflow&amp;sa=D&amp;ust=1489381456113000&amp;usg=AFQjCNFsTqFEn63Vb-QEGU4akoDA4BeZsQ">https://github.com/nvie/gitflow</a></span></p><p ><span>- </span><span ><a  href="https://www.google.com/url?q=http://nvie.com/posts/a-successful-git-branching-model/&amp;sa=D&amp;ust=1489381456114000&amp;usg=AFQjCNH99UxhGdhxQHrNivqsU6Y9kNZ76A">http://nvie.com/posts/a-successful-git-branching-model/</a></span></p>
+
+    <section class="comments">
+    <h3>Comentários</h3>
+    <div id="disqus_thread"></div>
+</section>
+<div id="disqus_thread"></div>
+<script>
+
+    var disqus_config = function () {
+        this.page.url = 'http://localhost:4000/git-github'; 
+        this.page.identifier = '/git-github'; 
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    
+    s.src = '//ral-oliver.disqus.com/embed.js';
+    
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</article>
+  </div>
+</body>
+</html>

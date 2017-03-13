@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-03-13T01:22:03-03:00</updated><id>http://localhost:4000/</id><title type="html">Ral Oliver - Frontend Developer</title><subtitle>Apaixonado pela Valesca, pai da Laura e amo escrever... principalmente se for código. Gratidão, Honestidade, Disciplina, Coerência e Criatividade. Esses são os meus principais valores.
+</subtitle><entry><title type="html">Sass &amp;amp; Compass</title><link href="http://localhost:4000/sass-compass" rel="alternate" type="text/html" title="Sass &amp; Compass" /><published>2016-02-14T23:22:10-02:00</published><updated>2016-02-14T23:22:10-02:00</updated><id>http://localhost:4000/sass-compass</id><content type="html" xml:base="http://localhost:4000/sass-compass">&lt;p&gt;&lt;img src=&quot;https://lh4.googleusercontent.com/-bQ80p_sfJFs/Vr_lTMQ0SUI/AAAAAAAAjjM/bSeszDif3fU/w1207-h905-no/Sass_Logo_Color.svg.png&quot; alt=&quot;Sass &amp;amp; Compass&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O CSS é uma linguagem um pouco burra quando se trata de lógica e tudo nos pré-processadores é pensando em como você consegue melhorar mais seu código e como ele pode ficar mais organizado.&lt;/p&gt;
+
+&lt;p&gt;O CSS é muito simples. Mas uma má organização pode levar equipes inteiras à loucura em longo prazo. Mas tenha em mente que ele, o SASS, não é uma ferramenta para escrever menos CSS, mas para organizar seu CSS&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$cores: (
+azul: #0176bb, 
+vermelho: #e3413e, 
+amarelo: #f8e042
+);
+
+@each $tema, $cor in $cores {
+.tema-#{tema} body {
+background-color: $cor;
+}
+}
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;O $tema seria cada uma das chaves, no nosso caso azul, vermelho e amarelo. O $cor seria cada um dos valores dos temas, ou seja, os valores hexadecimais. A função @each está dizendo assim: a cada valor dos temas (azul, vermelho, amarelo) que encontrar no mapa $cores, repita o bloco de código.&lt;/p&gt;
+
+&lt;p&gt;A função @each vai tratar de criar os blocos de CSS com o nome do tema e o hexadecimal.&lt;/p&gt;
+
+&lt;p&gt;Funções como if, else, while, each e for são aceitas no SASS ou em qualquer outro pré-processador.&lt;/p&gt;
+
+&lt;p&gt;Também é possível criar funções com a condição de que, se algo for qualquer coisa diferente de falso, execute determinado comando.&lt;/p&gt;
+
+&lt;p&gt;Se você tem uma variável qualquer, no nosso caso monster, ela pode mudar de valor em determinado lugar do código. Se mudar, há uma série de condições ali.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$type: monster;
+p {
+@if $type == ocean {
+color: blue;
+} @else if $type == matador {
+color: red;
+} @else if $type == monster {
+color: green;
+} @else {
+color: black;
+}
+}
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;for&lt;/em&gt;
+“Inicia uma variável e executa uma ação, incrementando essa variável um determinado número de vezes.”&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@for $i from 1 through 4 {
+.item-#{$i} {
+width: 10px * $i;
+font-size: 10px * $i;
+}
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;each&lt;/em&gt;
+“Define uma variável para item de uma lista de valores, produzindo blocos de código utilizando os valores da lista.”&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$cores: (
+azul: #0176bb,
+vermelho: #e3413e,
+amarelo: #f8e042
+);
+@each $tema, $cor in $cores {
+.tema-#{tema} body {
+background-color: $cor;
+}
+}
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;while&lt;/em&gt;
+“Repete um determinado bloco e código enquanto determinado estado for verdadeiro.”&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$i: 1
+$column-width: 60px
+@while $i &amp;lt; 13 {
+.grid-#{$i} {
+column-width: $column-width;
+}
+$column-width: $column-width + 90px;
+$i: $i + 1;
+}
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;O Miller Medeiros (http://blog.millermedeiros.com/about/) escreveu um ótimo artigo com o nome de The problem with CSS pre-processors (http://blog.millermedeiros.com/the-problem-with-css-pre-processors/).&lt;/p&gt;
+
+&lt;p&gt;Lá ele cita alguns motivos interessantes sobre não usar pré-processadores. Sugiro que você leia.&lt;/p&gt;
+
+&lt;p&gt;Pra facilitar essa curva de aprendizado, as equipes podem manter um manual explicando as boas práticas de escrita de código.&lt;/p&gt;
+
+&lt;p&gt;Sem comentar o aninhamento (nesting) de seletores para evitar o repetição de elementos.&lt;/p&gt;
+
+&lt;p&gt;Para evitar problemas assim, a documentação deveria ser muito bem atualizada, apontando todas as relações de mixins, extends, variáveis etc.&lt;/p&gt;
+
+&lt;p&gt;Geralmente pré-processadores escrevem mais código do que você escreveria manualmente.
+Usando extend&lt;/p&gt;
+
+&lt;p&gt;Hoje meu processo envolve usar Middleman e SASS nos projetos do Tableless&lt;/p&gt;
+
+&lt;p&gt;Fiz um artigo no Tableless que explica como instalar SASS na sua máquina de maneira fácil. Segue o link: http://tableless.com.br/instalando-sass-na-maquina-video/&lt;/p&gt;
+
+&lt;p&gt;A minha opinião é de que você não precisa aprender todas as novas ferramentas e tecnologias que existem por aí.&lt;/p&gt;
+
+&lt;p&gt;Muitos devs perdem tempo precioso dando atenção para novas ferramentas que nem serão usadas pela equipe ou que morrerão nos próximos meses.&lt;/p&gt;
+
+&lt;p&gt;Para usar o Sass é preciso instalar o ruby, como orientado no próprio site da documentação. A extensão do arquivo padrão é .scss e para observar as mudanças e a compilação do arquivo final (.css) o comando é:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sass --watch file.scss:file.css
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Uma boa prática é observar os nome dos diretórios e arquivos com o _ na frente. As variáveis são criadas a partir do $, exemplo: $color. Geralmente existe um arquivo principal .scss que faz a chamada via import de todos os outros arquivos. Mantenha sempre as variáveis num único arquivo, assim como os mixins, usando sempre a pasta helpers para padronizar a estrutura.&lt;/p&gt;
+
+&lt;p&gt;No Sass existem as funções, mixins, variáveis, aninhamento e outros detalhes que naturalmente não seria possível no css normal. O @include, faz referencia a chamada de um mixin.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Mixins&lt;/em&gt;
+O @mixin é criado de maneira parecida com o placeholder, mas aceita valores padrão, como no exemplo a seguir:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@mixin border-radius($radius: 0.3em) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Geralmente os mixins são usados para bloco de códigos, mas você pode usar os do Compass (framework) também. É possível com o @mixin receber argumentos na função, inclusive com a opção de valor padrão.&lt;/p&gt;
+
+&lt;p&gt;Functions
+Com o @function é possível realizar funções matemáticas e para invocar basta chamar ela sem nenhum operador, apenas o nome, exemplo:
+@function fixed-width ($value) {
+	@return $value x $variable;
+}
+width: fixed-width(18);&lt;/p&gt;
+
+&lt;p&gt;Ainda é possível arrendodar o resultado de uma operação, usando a função round do próprio Sass.&lt;/p&gt;
+
+&lt;p&gt;PlaceHolder
+Para criar extend e placeholder, basta usar o % na frente na criação e chamar atraves do @extend.
+Com o @extend você invoca um placeholder e faz chamada via %.&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%image-replacement {
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.plataformas li {
+  @extend %image-replacement;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Existem comandos internos no SASS para assistir, compilar e comprimir.
+Com o Sass também é possível realizar aninhamento (nesting) o que reduz a quantidade de código e sempre faz referencia ao item pai, exemplo:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;header {
+  border-top: 5px solid $color-default;
+  background: rgba($color-second, 0.8);
+  height: 90px;
+  width: 100%;
+  position: absolute;
+    // # para concatenar com string
+    @media #{$max-width} {
+      height: auto;
+        h1 {
+          max-width: 50%;
+          margin: 0 auto;
+            img {
+              max-width: 100%;
+              margin: .5em auto;
+              display: block;
+            } // fim do img
+        } // fim do h1
+    } // fim do mq (media query)
+} // fim do header
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Algo legal para usar com o Sass são as combinações de cores. Funções de cores em variações simples parecidas com as cores e regras do material design, exemplo: darken(#069, 20%) ou lighten(). Existem também outras funções: complement, sature e adjust-hue.&lt;/p&gt;
+
+&lt;p&gt;Media Queries
+Com o aninhamento (nesting) é possível criar as media queries internas diretamente no seletor (também da pra fazer automaticamente com o grunt).&lt;/p&gt;
+
+&lt;p&gt;Nos arquivos .scss é possível criar comentários com duas barras (//) e esses comentários não serão exibidos no css final.&lt;/p&gt;
+
+&lt;p&gt;Confira também a sintaxe para uso de valores completos em variáveis.
+Declaração:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$max-width: &quot;(max-width:&quot; $container-desktop&quot;)&quot;;
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Chamada:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;header .container {
+  position: relative;
+
+    @media #{$max-width} {
+      position: static;
+    }
+}
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Isso é como concatenar e ainda isolar toda um media querie numa variável.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;COMPASS&lt;/em&gt;
+Instalação&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- gem install compass 
+- compass create
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Atenção ao arquivo config.rb onde contêm as configurações do projeto.
+Também é possível observar (watch) com o compass:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;compass watch file.scss // atenção ao diretório (funciona como --watch do sass)
+
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Por padrão o compass adiciona comentários ao .css final, para desativar essa opção, altere o arquivo de configuração (config.rb) line-_comments=false (atenção o watch deve ser reiniciado).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Sprites&lt;/em&gt;
+O compass cria os sprites automaticamente. Basta isolar os arquivos desejados num diretório e chamar ele no arquivo principal do scss. Com a possibilidade de configurar um espaçamento entre as imagens.
+*directory é o nome do diretório onde se encontram os arquivos para o sprite.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$directory-spacing: 5px;
+@import &quot;directory/*.png&quot;;
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Para compilar os sprites é necessário invocar a função no arquivo desejado através do comando: 
+@include all-directory-sprites;&lt;/p&gt;
+
+&lt;p&gt;Com base no nome do diretório e dos arquivos, novas classe são criadas.&lt;/p&gt;
+
+&lt;p&gt;Minificar
+Com o compass, basta editar o arquivo de configuração (config.rb):
+output_style = :compressed
+Diretamente no Sass também é possível fazer:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sass --style compressed file.scss:file.min.css
+	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Ainda é possível realizar operações matemáticas no sass, como por exemplo para a conversão do tamanho de fonte (em, rem, px).&lt;/p&gt;</content><author><name></name></author><category term="css" /><category term="sass" /><summary type="html"></summary></entry><entry><title type="html">Ux para Web Designers</title><link href="http://localhost:4000/ux-para-web-designers" rel="alternate" type="text/html" title="Ux para Web Designers" /><published>2016-02-10T18:55:20-02:00</published><updated>2016-02-10T18:55:20-02:00</updated><id>http://localhost:4000/ux-para-web-designers</id><content type="html" xml:base="http://localhost:4000/ux-para-web-designers">&lt;p&gt;&lt;img src=&quot;https://udemy-images.udemy.com/course/750x422/115296_02e8_8.jpg&quot; alt=&quot;UX Para WebDesigners&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;=== &lt;em&gt;_1ª Camada_&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;#01 - Necessidades do usuário. Qual a necessidade do usuário que vai ser atendida nesse sistema?#&lt;/p&gt;
+
+&lt;p&gt;[NOTE] 
+(Tarefas/necessidades do usuário, quantas?) (Em qual contexto o usuário vai utilizar sua ferramenta? Se ele precisa usar na fila do banco o site precisa ser responvivo/mobile)&lt;/p&gt;
+
+&lt;p&gt;#02 - Objetivos do sistema. Qual o objetivo do sistema, o que o sistema vai oferecer para que o usuário consiga atingir seu objetivo?#&lt;/p&gt;
+
+&lt;p&gt;=== &lt;em&gt;_2ª Camada_&lt;/em&gt;:
+#01 - Requisitos de conteúdo. Quais são os requisitos de conteúdo?#&lt;/p&gt;
+
+&lt;p&gt;[NOTE] 
+(Tudo aquilo que o sistema vai ter, com base na necessidade do usuário e objetivos do sistema já estabelecidos)&lt;/p&gt;
+
+&lt;p&gt;#02 - Especificações Funcionais. Quais são as especificações funcionais?#&lt;/p&gt;
+
+&lt;p&gt;[NOTE] 
+(O que da para fazer no sistema, o que vai ter de função, quais funcionalidades vai ter para que o usuário consiga atingir seu objetivo?)&lt;/p&gt;
+
+&lt;p&gt;=== &lt;em&gt;_3ª Camada_&lt;/em&gt;:
+#01 - Arquitetura da informação.#
+(organizar todas as informações anteriores em 4 grandes sistemas)&lt;/p&gt;
+
+&lt;p&gt;A. Sistema de organização.&lt;/p&gt;
+
+&lt;p&gt;B. Sistema de Rotulação.&lt;/p&gt;
+
+&lt;p&gt;C. Sistema de Navegação.&lt;/p&gt;
+
+&lt;p&gt;D. Sistema de Busca&lt;/p&gt;
+
+&lt;p&gt;#02 - Design de interação. Como o usuário vai interagir com o sistema?#&lt;/p&gt;
+
+&lt;p&gt;[NOTE]
+(Em tela touch, com o mouse, comando de voz, gestos, ele vai estar na rua com celular, na fila de um banco com celular, no ônibus com um tablet?)&lt;/p&gt;
+
+&lt;p&gt;=== &lt;em&gt;_4ª Camada_&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;#01 - Design da informação. Como exibir a informação, da melhor forma possível, de acordo com as necessidades e objetivos do usuário?#&lt;/p&gt;
+
+&lt;p&gt;[NOTE]
+(Aqui começa a surgir o wireframe - http://www.axure.com/ )&lt;/p&gt;
+
+&lt;p&gt;A. Wireframe de baixíssima fidelidade&lt;/p&gt;
+
+&lt;p&gt;B. Wireframe de baixa fidelidade&lt;/p&gt;
+
+&lt;p&gt;C. Wireframe de média fidelidade&lt;/p&gt;
+
+&lt;p&gt;D. Wireframe de alta fidelidade&lt;/p&gt;
+
+&lt;p&gt;#02 - Design da navegação.#&lt;/p&gt;
+
+&lt;p&gt;[NOTE]
+( 50% definido com base nas definições do ‘Sistema de Navegação” na 3ª Camada tópico ‘C’ e 50% já visual.)&lt;/p&gt;
+
+&lt;p&gt;#03 - Design da interface.#&lt;/p&gt;
+
+&lt;p&gt;[NOTE]
+( 50% já é o próprio wireframe e 50% início do visual final do sistema.)&lt;/p&gt;
+
+&lt;p&gt;=== &lt;em&gt;_5ª Camada_&lt;/em&gt;:&lt;/p&gt;
+
+&lt;p&gt;#01 - Design visual.#
+[NOTE]
+(A cara que o sistema vai ter o design final.)&lt;/p&gt;
+
+&lt;p&gt;==== O passo a passo de um projeto de UX
+#Os 3 pilares de UX# 
+[NOTE]
+(Os 3 pilares são um resumo das 5 camadas anteriores.)&lt;/p&gt;
+
+&lt;p&gt;[options=”header,footer”]
+|=======================
+|Problema|Solução      |Interação
+|A etapa em que vai descobrir qual é o real problema do usuário. Lá no fundo, qual é o problema que precisa ser resolvido?
+Isso com base em: Pesquisas e entrevistas com o usuário    |Descoberto qual o problema que precisa ser resolvido é preciso estabelecer e criar a melhor solução para o problema identificado.     |É a maneira com que o usuário vai interagir com isso. Aqui entra a usabilidade, por exemplo.
+|=======================&lt;/p&gt;
+
+&lt;p&gt;#&lt;em&gt;Passo 1&lt;/em&gt; - Descobrir o Problema#
+[NOTE]
+Passo difícil, pois é preciso descobrir e balancear o problema tanto na visão do usuário quanto na visão da empresa. O problema precisa estar coerente na visão de todos envolvidos no projeto.&lt;/p&gt;
+
+&lt;p&gt;[options=”header,footer”]
+|=======================
+|Na visão da Empresa|Na visão do Usuário    &lt;br /&gt;
+|Quem são os clientes dessa empresa?|Entrevistas com usuários
+|O que a empresa vende?|Testes de usabilidade exploratórios, com produtos concorrentes já existentes. Para entender o problema do usuário.
+|Como essa empresa ganha dinehiro?|Observação. Observar o usuário no cotidiano dele, shadow, simplesmente observar como ele reage em determinada situação
+|Quais os objetivos de longo prazo?|Análise de pesquisas anteriores.
+|Quais os objetivos do projeto?|Análise de dados sobre o perfil do público.
+|Como a empresa pretende rentabilizar esse projeto?|Aplicações de questionários.
+||Personas. Uma pessoa fictícia mas embasada no perfil real do público alvo. 
+|=======================&lt;/p&gt;
+
+&lt;p&gt;[NOTE]
+Exemplo do vídeo na prática: Uma entrevista onde começa a falar sobre um todo da empresa/projeto até ir afunilando até encontrar problemas e possíveis soluções que possa ter no projeto.&lt;/p&gt;
+
+&lt;p&gt;#Com todas as informações obtidas nessa conversa é preciso:#&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fazer um compilado de todas essas anotações listando apenas os itens importantes.&lt;/li&gt;
+  &lt;li&gt;Entrevistar personagens/pessoas que possam aparecer como problemas ou dúvidas no decorrer da entrevista.
+&lt;em&gt;(Pode ser feito 4 ou 5 conversas/entrevistas assim.)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[options=”header,footer”]
+|=======================
+|Inventário de Conteúdo 
+|&lt;em&gt;Movitações X Restrições&lt;/em&gt;
+|&lt;em&gt;(De acordo com o projeto define-se pontos negativos e positivos, cruzando esses pontos onde vai surgir problemas e soluções.)&lt;/em&gt;
+|=======================&lt;/p&gt;
+
+&lt;p&gt;#&lt;em&gt;Passo 2&lt;/em&gt; - Encontrar Soluções#
+[NOTE]
+Passo feito para ter ideias, não necessaŕiamente válidas. A decisão final das ideias/soluções que realmente vão ser utilizadas vem no passo 3.&lt;/p&gt;
+
+&lt;p&gt;[options=”header,footer”]
+|=======================
+|Encontrar Soluções 
+|1 - Benchmarking: &lt;em&gt;Como empresas de outros mercados resolvem esses problemas?&lt;/em&gt;
+|2 - Análise de concorrência: &lt;em&gt;Como outros players do mesmo mercado que estou, solucionam esses problemas?&lt;/em&gt;
+|3 - Análise de tendência: &lt;em&gt;Para onde o mercado está indo e do que posso me adiantar e tirar proveito disso agora?&lt;/em&gt;
+|4 - Brainstorm: &lt;em&gt;Feito os itens anteriores começa as rodadas de brainstorm junto a todos os envolvidos no projeto&lt;/em&gt;
+|=======================&lt;/p&gt;
+
+&lt;p&gt;===== Dica: Envolver toda a equipe e cliente (se possível) na criação de soluções.
+[NOTE]
+Garantir que todos tiveram entendimentos iguais do problema.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Apresentar as descobertas do passo 1&lt;/li&gt;
+  &lt;li&gt;Fazer rodadas de brainstorm (com hora marcada)
+[NOTE]
+Neste brainstorm lista todos os grandes/principais problemas encontrados onde todos que estão reunidos começam a apontar possíveis soluções para melhorar ou solucionar aquele problema.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;#Os 4 principais problemas encontrados#&lt;/p&gt;
+
+&lt;p&gt;[options=”header,footer”]
+|=======================
+|Problema 1|Problema 2|Problema 3|Problema 4
+|Solução A|Solução A|Solução A|Solução A
+|Solução B|Solução B|Solução B|Solução B
+|Solução C|Solução C|Solução C|Solução C
+|=======================&lt;/p&gt;
+
+&lt;p&gt;#&lt;em&gt;Passo 3&lt;/em&gt; - Decidir e Priorizar#
+[NOTE]
+Aqui vai priorizar todas as ideias que foram propostas. Como não é viável produzir e executar tudo é selecionado as melhores ideias para resolver cada problema.
+&lt;em&gt;(Essas ideias sempre devem ser discutidas com todos os que estão inseridos no projeto.)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Imprescindível:&lt;/em&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Envolver toda a equipe e cliente nas decisões&lt;/li&gt;
+  &lt;li&gt;Balancear necessidade do usuário X necessidade do cliente&lt;/li&gt;
+  &lt;li&gt;Viabilidade técnica&lt;/li&gt;
+  &lt;li&gt;Viabilidade financeira&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;#&lt;em&gt;Passo 4&lt;/em&gt; - Arquitetura da Informação#
+[NOTE]
+Nesse passo lista o que esse projeto vai, de fato, ter de conteúdo: Quais são todas as páginas, recursos e funcionalidades. Para organizar isso, como é, na camada de Arquitetura da informação.&lt;/p&gt;
+
+&lt;p&gt;#Arquitetura da Informação#
+&lt;em&gt;(Este item está na 3ª Camada)&lt;/em&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Organizar&lt;/li&gt;
+  &lt;li&gt;Rotular&lt;/li&gt;
+  &lt;li&gt;Definir Navegação&lt;/li&gt;
+  &lt;li&gt;Definir Busca&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;#&lt;em&gt;Passo 5&lt;/em&gt; - Interface#&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Passo em que é feito toda parte de prototipação, testes e ajustes.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;#Interface# &lt;em&gt;(Está na 3ª camada no item 2)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;[options=”header,footer”]
+|=======================
+|Prototipação
+|Teste &lt;em&gt;(Pode ser feito via skype, hangout usando um roteiro simples. O testar com 4 pessoas torna o teste bastante eficiente )&lt;/em&gt;
+|Ajustes &lt;em&gt;(Ajusta aquilo que não funcionou no teste)&lt;/em&gt;
+|Layout &lt;em&gt;(Design final, o layout final da interface)&lt;/em&gt;
+|=======================&lt;/p&gt;
+
+&lt;p&gt;#&lt;em&gt;Passo 6&lt;/em&gt; - Acompanhamento do projeto#&lt;/p&gt;
+
+&lt;p&gt;[NOTE]
+O trabalho de experiência do usuário não é um trabalho só do profissional de UX. O profissional de UX é quem conhece os métodos que precisam ser aplicados e o que precisa ser feito antes do que para garantir uma boa experiência do usuário. Mas a experiência do usuário em si é fruto do trabalho em conjunto de todos os que estão envolvidos com o projeto. Não há como propor a melhor solução sem o envolvimentos de todos os envolvidos.&lt;/p&gt;
+
+&lt;p&gt;[NOTE]
+Esse envolvimento faz com que a equipe esteja imersa no projeto e assim entenda melhor tudo o que precisa ser feito.&lt;/p&gt;
+
+&lt;p&gt;[NOTE]
+Por experiência, como em um iceberg o problema está sempre mais embaixo, mais profundo. E sempre tem que estar balanceado Experiência do Usuário X Interesses da Empresa.&lt;/p&gt;</content><author><name></name></author><category term="ux" /><category term="design" /><summary type="html"></summary></entry><entry><title type="html">Google Material Design</title><link href="http://localhost:4000/google-material-design" rel="alternate" type="text/html" title="Google Material Design" /><published>2015-12-20T20:22:10-02:00</published><updated>2015-12-20T20:22:10-02:00</updated><id>http://localhost:4000/google-material-design</id><content type="html" xml:base="http://localhost:4000/google-material-design">&lt;p&gt;&lt;img src=&quot;https://lh6.googleusercontent.com/-4TYoUsMzH6M/VrntRcl461I/AAAAAAAAjdc/6s3YM6tCVZc/w740-h434-no/2015-12-20-material-design.jpg&quot; alt=&quot;Google Material Design&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Desde que comecei a usar frameworks CSS (leia-se aqui Twitter Bootstrap ou simplesmente Bootstrap) algo mudou na maneira como eu criava websites ou personalizava templates Joomla. Era prático e fácil personalizar posições, botões, cores, layouts e etc =) as coisas não ficam tão feias (pensando apenas na funcionalidade) mas era o começo de uma paixão por praticidade e indepência. Tudo que criava ficava mais bonitinho e eu não precisava me preocupar tanto com design.&lt;/p&gt;
+
+&lt;p&gt;Com a chegada do Material Design, uma nova janela se abriu e eu me joguei de vez em UX, Mobile First pois cada vez mais eu via que design não é apenas fazer algo “bonitinho” é ser prático, ter empatia e ativei o meu lado criativo (de músico) e percebi que eu também posso ser criativo, pensando de maneira “design thinking” e abraçar o problema não apenas solução.&lt;/p&gt;
+
+&lt;p&gt;Pois bem, cheguei a acompanhar um pouco da trajetória do Android, desde a versão 2 onde eu usava um HTC XingLing e realmente o sistema não era nem um pouco amigável e o iOS era muito mais atraente, mas com a chegada do JellyBean, KitKat, Lollipop e Marshmallow a coisa ficou bem melhor e o MD (Material Design) foi criado pensando nisso, na &lt;em&gt;unificação da unidade so sistema&lt;/em&gt;, padrozinação e desde sempre o Google tinha essa consciencia de que isso era realmente necessário para que o Android ganhasse mais a atenção dos desenvolvedores, o que nos leva a um outro ponto: &lt;em&gt;menos design e mais soluções&lt;/em&gt; (certo que design também é solução) mas o objetivo do Google é de que quem cria as soluções pense nelas e não tanto na aparência, pra isso existe o MD com toda a documentação e seus padrões bem escritos.&lt;/p&gt;
+
+&lt;p&gt;Desde a versão Lollipop (onde o MD de fato se consolidou) o objetivo foi pensar em &lt;em&gt;coisas reais, o MD inicia com as coisas da vida real&lt;/em&gt;, deixando claro em sua documentação a diferença entre &lt;em&gt;densidade de tela&lt;/em&gt; e &lt;em&gt;pixels&lt;/em&gt; (+++&lt;a href=&quot;http://www.google.com.br/design/spec/layout/units-measurements.html#units-measurements-pixel-density&quot;&gt;veja aqui como calcular a diferença&lt;/a&gt;+++).&lt;/p&gt;
+
+&lt;p&gt;Ainda com &lt;em&gt;shadows and lights&lt;/em&gt; é possível ver o lance das “coisas da vida real” bem latentes, como um papel e a sombra desaparecendo sempre que elemento se afasta da superfície. É como o papel, mas com mais possibilidades, algo como um &lt;em&gt;papel quântico&lt;/em&gt; e uma das regras da física que &lt;em&gt;dois elementos não podem ocupar o mesmo espaço&lt;/em&gt; é bem clara no MD, além disso eles &lt;em&gt;não podem passar entre eles pois são sólidos&lt;/em&gt; isso é uma das premissa do MD.&lt;/p&gt;
+
+&lt;p&gt;Falando sobre o &lt;em&gt;content&lt;/em&gt; onde o conteúdo principal da página exibida é carregado, também é comum a um papel, ele &lt;em&gt;não deve passar da área de toque&lt;/em&gt; ou seja, &lt;em&gt;o conteúdo vai até onde o papel acaba&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Falando sobre &lt;em&gt;grids&lt;/em&gt; existem diversas maneiras de combinar as colunas no MD, inclusive com ordem de exibição diferente a depender do dispositivo, mas é essencial ficar atento ao DP (densidade da tela) pois isso pode ser diferente em cada dispositivo.&lt;/p&gt;
+
+&lt;p&gt;No geral a &lt;em&gt;UI estrutura&lt;/em&gt; do MD é bem similar aos aplicativos atuais, com &lt;em&gt;sidebar&lt;/em&gt; e uma barra do lado direito e o conteúdo ao centro. A depender do dispositivos os elementos no rodapé podem não existir e na barra da direita são carregadas informações do item selecionado, assim como no Google Drive por exemplo. Na sidebar é comum vermos informações gerais e configurações do aplicativo.&lt;/p&gt;
+
+&lt;p&gt;Nossa, uma das coisas que mais me deixaram confuso ao dar uma conferida na +++&lt;a href=&quot;http://www.google.com/design/spec/material-design/introduction.html&quot;&gt;documentação do MD&lt;/a&gt;+++ são as &lt;em&gt;cores&lt;/em&gt; nossa, são muitas opções, combinações e possibilidades, mas e ai, como escolher a paleta certa? Então, percebi que as que tem um &lt;em&gt;A na frente&lt;/em&gt; do código são &lt;em&gt;cores complementares&lt;/em&gt;, apenas um acessório da cor principal. Fiz alguns testes e sempre que usei &lt;em&gt;as cores 500 como principais&lt;/em&gt; para itens importantes (botões, links, objetivo principal da página), &lt;em&gt;700 no topo&lt;/em&gt; e &lt;em&gt;300 para os outros elementos&lt;/em&gt; a combinação bateu e funcionou legal.&lt;/p&gt;
+
+&lt;p&gt;Inclusive você pode +++&lt;a href=&quot;http://www.google.com/design/spec/style/color.html#color-color-palette&quot;&gt;encontrar aqui&lt;/a&gt;+++ um &lt;em&gt;arquivo do Photoshop&lt;/em&gt; com os &lt;em&gt;swatches&lt;/em&gt; e as suas combinações e na +++&lt;a href=&quot;http://www.google.com/design/spec/style/color.html#color-ui-color-application&quot;&gt;página de cores&lt;/a&gt;+++ também é possível encontrar qual a opacidade ideal para cada cor de fundo (background) escolhido, opacidade para textos e ícones, ah por falar neles…&lt;/p&gt;
+
+&lt;p&gt;Tanto para &lt;em&gt;ícones&lt;/em&gt; como para &lt;em&gt;imagens&lt;/em&gt; o MD é bem claro: para criação de novos ícones, a documentação apresenta o espaçamento necessário, grids, keylines, dp (densidade da tela), geometria, e tudo muito bem detalhado. Mas se você preferir, +++&lt;a href=&quot;https://design.google.com/icons/&quot;&gt;&lt;em&gt;também existem os ícones padrões usados&lt;/em&gt;&lt;/a&gt;+++ são de graça e além de ser fonte pode ser usado livremente nos formatos SVG e PNG também disponível.&lt;/p&gt;
+
+&lt;p&gt;Sobre &lt;em&gt;imagens&lt;/em&gt; vale ficar atento ao contexto e usar apenas uma imagem que represente de maneira real (mais uma vez a realidade das coisas) o que está em evidência na tela em questão. &lt;em&gt;Nada de usar banco de imagens (stock photos)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;O MD usa basicamente +++&lt;a href=&quot;http://www.google.com.br/design/spec/style/typography.html#typography-styles&quot;&gt;&lt;em&gt;duas fontes&lt;/em&gt;&lt;/a&gt;+++ a +++&lt;a href=&quot;https://www.google.com/fonts/specimen/Roboto&quot;&gt;&lt;em&gt;Roboto&lt;/em&gt;&lt;/a&gt;+++  (que tem diversas variações) e a +++&lt;a href=&quot;https://www.google.com/get/noto/&quot;&gt;&lt;em&gt;Noto&lt;/em&gt;&lt;/a&gt;+++ que oferece recursos para escrita diferente da ocidental. Ambas possuem especificações de tamanho, exemplos de uso, uso em botões, títulos, etc. E por falar em botões no MD tem três tipos de botões que me chamaram mais atenção: &lt;em&gt;Flat Buttons&lt;/em&gt; que podem ser usados em itens com menos força que um botão para ação por exemplo. Num primeiro momento eles &lt;em&gt;parecem apenas um link&lt;/em&gt;, mas &lt;em&gt;são preenchidos por cor no momento que são pressionados&lt;/em&gt;. &lt;em&gt;Raised Buttons&lt;/em&gt; mais tradicional &lt;em&gt;parecido com um botão como conhecemos&lt;/em&gt; com sombra e tudo mais e que &lt;em&gt;percebe-se que o mesmo foi pressionado&lt;/em&gt; quando a sombra some e fica apenas o botão. &lt;em&gt;Floating Action Buttons&lt;/em&gt; esses são os meus preferidos e +++&lt;a href=&quot;http://www.google.com.br/design/spec/components/buttons-floating-action-button.html&quot;&gt; o MD tem uma seção exclusiva para eles&lt;/a&gt;+++ são usados para adicionar itens numa lista, editar elementos, criar novos, geralmente com um ícone que vai representar uma ação na tela atual e por tem uma importância bem relativa, pode variar de posição, +++&lt;a href=&quot;http://www.google.com.br/design/spec/components/buttons-floating-action-button.html#buttons-floating-action-button-floating-action-button&quot;&gt; como mostrado nos exemplos dessa página&lt;/a&gt;+++.&lt;/p&gt;
+
+&lt;p&gt;Comecei falando sobre frameworks CSS e vou deixar um aqui que comecei a usar, o +++&lt;a href=&quot;http://materializecss.com/&quot;&gt;Materialize&lt;/a&gt;+++, pra você que já usou o Bootstrap vai sentir muita familiaridade nele, e se for usar em projetos menores talvez você se sinta como eu, mais motivado a aprender mais. Ou se você já se sente mais seguro sobre o MD, pode usar o +++&lt;a href=&quot;http://www.getmdl.io/&quot;&gt;Material Design Lite&lt;/a&gt;+++ que funciona muito bem alinhado com o &lt;em&gt;AngularJS&lt;/em&gt; mas fique a vontade para conferir a documentação de ambos e aplicar em seus projetos. Vale salientar que o MD foi criado para criar um padrão e existe muita pesquisa nele (comportamento, AIDA, UX), e como eu disse, &lt;em&gt;ele vai te ajudar a não pensar tanto em design&lt;/em&gt;, mas na solução, isso pode ser redundante mas &lt;em&gt;o foco deve ser resolver&lt;/em&gt; um problema e pode ter certeza que &lt;em&gt;a curva de aprendizado no uso da sua ferramenta vai ser muito menor&lt;/em&gt; se você usar os princípios do Google Material Design.&lt;/p&gt;</content><author><name></name></author><category term="ux" /><category term="material design" /><summary type="html"></summary></entry></feed>

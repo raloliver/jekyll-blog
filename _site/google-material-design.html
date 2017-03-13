@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Material Design</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="container">
+
+    <header class="masthead">
+  <h1 class="masthead-title">
+    <a href="/">Ral Oliver - Frontend Developer<span>&#39;s blog</span></a>
+  </h1>
+  <!--<nav class="masthead-nav">
+    
+      
+    
+      
+    
+      
+        <a href="/english-path">English (livros e cursos)</a>
+      
+    
+      
+        <a href="/git-github">Git & Github</a>
+      
+    
+      
+    
+  </nav>-->
+</header>
+
+    
+
+
+
+<article class="content post">
+    <h1 class="post-title">Google Material Design</h1>
+    <div class="post-date">
+        <time>20 Dec 2015</time>
+        <span class="reading-time" title="Estimated read time"> - 6 minutes to read</span>
+    </div>
+
+    <p><img src="https://lh6.googleusercontent.com/-4TYoUsMzH6M/VrntRcl461I/AAAAAAAAjdc/6s3YM6tCVZc/w740-h434-no/2015-12-20-material-design.jpg" alt="Google Material Design" /></p>
+
+<p>Desde que comecei a usar frameworks CSS (leia-se aqui Twitter Bootstrap ou simplesmente Bootstrap) algo mudou na maneira como eu criava websites ou personalizava templates Joomla. Era prático e fácil personalizar posições, botões, cores, layouts e etc =) as coisas não ficam tão feias (pensando apenas na funcionalidade) mas era o começo de uma paixão por praticidade e indepência. Tudo que criava ficava mais bonitinho e eu não precisava me preocupar tanto com design.</p>
+
+<p>Com a chegada do Material Design, uma nova janela se abriu e eu me joguei de vez em UX, Mobile First pois cada vez mais eu via que design não é apenas fazer algo “bonitinho” é ser prático, ter empatia e ativei o meu lado criativo (de músico) e percebi que eu também posso ser criativo, pensando de maneira “design thinking” e abraçar o problema não apenas solução.</p>
+
+<p>Pois bem, cheguei a acompanhar um pouco da trajetória do Android, desde a versão 2 onde eu usava um HTC XingLing e realmente o sistema não era nem um pouco amigável e o iOS era muito mais atraente, mas com a chegada do JellyBean, KitKat, Lollipop e Marshmallow a coisa ficou bem melhor e o MD (Material Design) foi criado pensando nisso, na <em>unificação da unidade so sistema</em>, padrozinação e desde sempre o Google tinha essa consciencia de que isso era realmente necessário para que o Android ganhasse mais a atenção dos desenvolvedores, o que nos leva a um outro ponto: <em>menos design e mais soluções</em> (certo que design também é solução) mas o objetivo do Google é de que quem cria as soluções pense nelas e não tanto na aparência, pra isso existe o MD com toda a documentação e seus padrões bem escritos.</p>
+
+<p>Desde a versão Lollipop (onde o MD de fato se consolidou) o objetivo foi pensar em <em>coisas reais, o MD inicia com as coisas da vida real</em>, deixando claro em sua documentação a diferença entre <em>densidade de tela</em> e <em>pixels</em> (+++<a href="http://www.google.com.br/design/spec/layout/units-measurements.html#units-measurements-pixel-density">veja aqui como calcular a diferença</a>+++).</p>
+
+<p>Ainda com <em>shadows and lights</em> é possível ver o lance das “coisas da vida real” bem latentes, como um papel e a sombra desaparecendo sempre que elemento se afasta da superfície. É como o papel, mas com mais possibilidades, algo como um <em>papel quântico</em> e uma das regras da física que <em>dois elementos não podem ocupar o mesmo espaço</em> é bem clara no MD, além disso eles <em>não podem passar entre eles pois são sólidos</em> isso é uma das premissa do MD.</p>
+
+<p>Falando sobre o <em>content</em> onde o conteúdo principal da página exibida é carregado, também é comum a um papel, ele <em>não deve passar da área de toque</em> ou seja, <em>o conteúdo vai até onde o papel acaba</em>.</p>
+
+<p>Falando sobre <em>grids</em> existem diversas maneiras de combinar as colunas no MD, inclusive com ordem de exibição diferente a depender do dispositivo, mas é essencial ficar atento ao DP (densidade da tela) pois isso pode ser diferente em cada dispositivo.</p>
+
+<p>No geral a <em>UI estrutura</em> do MD é bem similar aos aplicativos atuais, com <em>sidebar</em> e uma barra do lado direito e o conteúdo ao centro. A depender do dispositivos os elementos no rodapé podem não existir e na barra da direita são carregadas informações do item selecionado, assim como no Google Drive por exemplo. Na sidebar é comum vermos informações gerais e configurações do aplicativo.</p>
+
+<p>Nossa, uma das coisas que mais me deixaram confuso ao dar uma conferida na +++<a href="http://www.google.com/design/spec/material-design/introduction.html">documentação do MD</a>+++ são as <em>cores</em> nossa, são muitas opções, combinações e possibilidades, mas e ai, como escolher a paleta certa? Então, percebi que as que tem um <em>A na frente</em> do código são <em>cores complementares</em>, apenas um acessório da cor principal. Fiz alguns testes e sempre que usei <em>as cores 500 como principais</em> para itens importantes (botões, links, objetivo principal da página), <em>700 no topo</em> e <em>300 para os outros elementos</em> a combinação bateu e funcionou legal.</p>
+
+<p>Inclusive você pode +++<a href="http://www.google.com/design/spec/style/color.html#color-color-palette">encontrar aqui</a>+++ um <em>arquivo do Photoshop</em> com os <em>swatches</em> e as suas combinações e na +++<a href="http://www.google.com/design/spec/style/color.html#color-ui-color-application">página de cores</a>+++ também é possível encontrar qual a opacidade ideal para cada cor de fundo (background) escolhido, opacidade para textos e ícones, ah por falar neles…</p>
+
+<p>Tanto para <em>ícones</em> como para <em>imagens</em> o MD é bem claro: para criação de novos ícones, a documentação apresenta o espaçamento necessário, grids, keylines, dp (densidade da tela), geometria, e tudo muito bem detalhado. Mas se você preferir, +++<a href="https://design.google.com/icons/"><em>também existem os ícones padrões usados</em></a>+++ são de graça e além de ser fonte pode ser usado livremente nos formatos SVG e PNG também disponível.</p>
+
+<p>Sobre <em>imagens</em> vale ficar atento ao contexto e usar apenas uma imagem que represente de maneira real (mais uma vez a realidade das coisas) o que está em evidência na tela em questão. <em>Nada de usar banco de imagens (stock photos)</em>.</p>
+
+<p>O MD usa basicamente +++<a href="http://www.google.com.br/design/spec/style/typography.html#typography-styles"><em>duas fontes</em></a>+++ a +++<a href="https://www.google.com/fonts/specimen/Roboto"><em>Roboto</em></a>+++  (que tem diversas variações) e a +++<a href="https://www.google.com/get/noto/"><em>Noto</em></a>+++ que oferece recursos para escrita diferente da ocidental. Ambas possuem especificações de tamanho, exemplos de uso, uso em botões, títulos, etc. E por falar em botões no MD tem três tipos de botões que me chamaram mais atenção: <em>Flat Buttons</em> que podem ser usados em itens com menos força que um botão para ação por exemplo. Num primeiro momento eles <em>parecem apenas um link</em>, mas <em>são preenchidos por cor no momento que são pressionados</em>. <em>Raised Buttons</em> mais tradicional <em>parecido com um botão como conhecemos</em> com sombra e tudo mais e que <em>percebe-se que o mesmo foi pressionado</em> quando a sombra some e fica apenas o botão. <em>Floating Action Buttons</em> esses são os meus preferidos e +++<a href="http://www.google.com.br/design/spec/components/buttons-floating-action-button.html"> o MD tem uma seção exclusiva para eles</a>+++ são usados para adicionar itens numa lista, editar elementos, criar novos, geralmente com um ícone que vai representar uma ação na tela atual e por tem uma importância bem relativa, pode variar de posição, +++<a href="http://www.google.com.br/design/spec/components/buttons-floating-action-button.html#buttons-floating-action-button-floating-action-button"> como mostrado nos exemplos dessa página</a>+++.</p>
+
+<p>Comecei falando sobre frameworks CSS e vou deixar um aqui que comecei a usar, o +++<a href="http://materializecss.com/">Materialize</a>+++, pra você que já usou o Bootstrap vai sentir muita familiaridade nele, e se for usar em projetos menores talvez você se sinta como eu, mais motivado a aprender mais. Ou se você já se sente mais seguro sobre o MD, pode usar o +++<a href="http://www.getmdl.io/">Material Design Lite</a>+++ que funciona muito bem alinhado com o <em>AngularJS</em> mas fique a vontade para conferir a documentação de ambos e aplicar em seus projetos. Vale salientar que o MD foi criado para criar um padrão e existe muita pesquisa nele (comportamento, AIDA, UX), e como eu disse, <em>ele vai te ajudar a não pensar tanto em design</em>, mas na solução, isso pode ser redundante mas <em>o foco deve ser resolver</em> um problema e pode ter certeza que <em>a curva de aprendizado no uso da sua ferramenta vai ser muito menor</em> se você usar os princípios do Google Material Design.</p>
+
+
+    <section class="comments">
+    <h3>Comentários</h3>
+    <div id="disqus_thread"></div>
+</section>
+<div id="disqus_thread"></div>
+<script>
+
+    var disqus_config = function () {
+        this.page.url = 'http://localhost:4000/google-material-design'; 
+        this.page.identifier = '/google-material-design'; 
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    
+    s.src = '//ral-oliver.disqus.com/embed.js';
+    
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</article>
+  </div>
+</body>
+</html>
