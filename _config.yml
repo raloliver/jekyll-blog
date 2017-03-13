@@ -4,8 +4,8 @@ email: contato@raloliver.com.br
 description: > 
   Apaixonado pela Valesca, pai da Laura e amo escrever... principalmente se for código.
   Gratidão, Honestidade, Disciplina, Coerência e Criatividade. Esses são os meus principais valores.
-baseurl: "/jekyll-blog"
-url: "http://raloliver.github.io" 
+baseurl: ""
+url: "" 
 twitter_username: raloliver
 github_username:  raloliver
 
