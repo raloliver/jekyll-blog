@@ -1,0 +1,39 @@
+---
+layout: post
+title: "Google Material Design"
+date: 2015-12-20 19:22:10 -0300
+categories: design
+tags: 
+    - ux
+    - material design
+---
+
+![Google Material Design](https://lh6.googleusercontent.com/-4TYoUsMzH6M/VrntRcl461I/AAAAAAAAjdc/6s3YM6tCVZc/w740-h434-no/2015-12-20-material-design.jpg)
+
+Desde que comecei a usar frameworks CSS (leia-se aqui Twitter Bootstrap ou simplesmente Bootstrap) algo mudou na maneira como eu criava websites ou personalizava templates Joomla. Era prático e fácil personalizar posições, botões, cores, layouts e etc =) as coisas não ficam tão feias (pensando apenas na funcionalidade) mas era o começo de uma paixão por praticidade e indepência. Tudo que criava ficava mais bonitinho e eu não precisava me preocupar tanto com design.
+
+Com a chegada do Material Design, uma nova janela se abriu e eu me joguei de vez em UX, Mobile First pois cada vez mais eu via que design não é apenas fazer algo “bonitinho” é ser prático, ter empatia e ativei o meu lado criativo (de músico) e percebi que eu também posso ser criativo, pensando de maneira “design thinking” e abraçar o problema não apenas solução.
+
+Pois bem, cheguei a acompanhar um pouco da trajetória do Android, desde a versão 2 onde eu usava um HTC XingLing e realmente o sistema não era nem um pouco amigável e o iOS era muito mais atraente, mas com a chegada do JellyBean, KitKat, Lollipop e Marshmallow a coisa ficou bem melhor e o MD (Material Design) foi criado pensando nisso, na *unificação da unidade so sistema*, padrozinação e desde sempre o Google tinha essa consciencia de que isso era realmente necessário para que o Android ganhasse mais a atenção dos desenvolvedores, o que nos leva a um outro ponto: *menos design e mais soluções* (certo que design também é solução) mas o objetivo do Google é de que quem cria as soluções pense nelas e não tanto na aparência, pra isso existe o MD com toda a documentação e seus padrões bem escritos.
+
+Desde a versão Lollipop (onde o MD de fato se consolidou) o objetivo foi pensar em *coisas reais, o MD inicia com as coisas da vida real*, deixando claro em sua documentação a diferença entre *densidade de tela* e *pixels* (+++<a href="http://www.google.com.br/design/spec/layout/units-measurements.html#units-measurements-pixel-density">veja aqui como calcular a diferença</a>+++).
+
+Ainda com *shadows and lights* é possível ver o lance das “coisas da vida real” bem latentes, como um papel e a sombra desaparecendo sempre que elemento se afasta da superfície. É como o papel, mas com mais possibilidades, algo como um *papel quântico* e uma das regras da física que *dois elementos não podem ocupar o mesmo espaço* é bem clara no MD, além disso eles *não podem passar entre eles pois são sólidos* isso é uma das premissa do MD.
+
+Falando sobre o *content* onde o conteúdo principal da página exibida é carregado, também é comum a um papel, ele *não deve passar da área de toque* ou seja, *o conteúdo vai até onde o papel acaba*.
+
+Falando sobre *grids* existem diversas maneiras de combinar as colunas no MD, inclusive com ordem de exibição diferente a depender do dispositivo, mas é essencial ficar atento ao DP (densidade da tela) pois isso pode ser diferente em cada dispositivo.
+
+No geral a *UI estrutura* do MD é bem similar aos aplicativos atuais, com *sidebar* e uma barra do lado direito e o conteúdo ao centro. A depender do dispositivos os elementos no rodapé podem não existir e na barra da direita são carregadas informações do item selecionado, assim como no Google Drive por exemplo. Na sidebar é comum vermos informações gerais e configurações do aplicativo.
+
+Nossa, uma das coisas que mais me deixaram confuso ao dar uma conferida na +++<a href="http://www.google.com/design/spec/material-design/introduction.html">documentação do MD</a>+++ são as *cores* nossa, são muitas opções, combinações e possibilidades, mas e ai, como escolher a paleta certa? Então, percebi que as que tem um *A na frente* do código são *cores complementares*, apenas um acessório da cor principal. Fiz alguns testes e sempre que usei *as cores 500 como principais* para itens importantes (botões, links, objetivo principal da página), *700 no topo* e *300 para os outros elementos* a combinação bateu e funcionou legal.
+
+Inclusive você pode +++<a href="http://www.google.com/design/spec/style/color.html#color-color-palette">encontrar aqui</a>+++ um *arquivo do Photoshop* com os *swatches* e as suas combinações e na +++<a href="http://www.google.com/design/spec/style/color.html#color-ui-color-application">página de cores</a>+++ também é possível encontrar qual a opacidade ideal para cada cor de fundo (background) escolhido, opacidade para textos e ícones, ah por falar neles…
+
+Tanto para *ícones* como para *imagens* o MD é bem claro: para criação de novos ícones, a documentação apresenta o espaçamento necessário, grids, keylines, dp (densidade da tela), geometria, e tudo muito bem detalhado. Mas se você preferir, +++<a href="https://design.google.com/icons/">*também existem os ícones padrões usados*</a>+++ são de graça e além de ser fonte pode ser usado livremente nos formatos SVG e PNG também disponível.
+
+Sobre *imagens* vale ficar atento ao contexto e usar apenas uma imagem que represente de maneira real (mais uma vez a realidade das coisas) o que está em evidência na tela em questão. *Nada de usar banco de imagens (stock photos)*.
+
+O MD usa basicamente +++<a href="http://www.google.com.br/design/spec/style/typography.html#typography-styles">*duas fontes*</a>+++ a +++<a href="https://www.google.com/fonts/specimen/Roboto">*Roboto*</a>+++  (que tem diversas variações) e a +++<a href="https://www.google.com/get/noto/">*Noto*</a>+++ que oferece recursos para escrita diferente da ocidental. Ambas possuem especificações de tamanho, exemplos de uso, uso em botões, títulos, etc. E por falar em botões no MD tem três tipos de botões que me chamaram mais atenção: *Flat Buttons* que podem ser usados em itens com menos força que um botão para ação por exemplo. Num primeiro momento eles *parecem apenas um link*, mas *são preenchidos por cor no momento que são pressionados*. *Raised Buttons* mais tradicional *parecido com um botão como conhecemos* com sombra e tudo mais e que *percebe-se que o mesmo foi pressionado* quando a sombra some e fica apenas o botão. *Floating Action Buttons* esses são os meus preferidos e +++<a href="http://www.google.com.br/design/spec/components/buttons-floating-action-button.html"> o MD tem uma seção exclusiva para eles</a>+++ são usados para adicionar itens numa lista, editar elementos, criar novos, geralmente com um ícone que vai representar uma ação na tela atual e por tem uma importância bem relativa, pode variar de posição, +++<a href="http://www.google.com.br/design/spec/components/buttons-floating-action-button.html#buttons-floating-action-button-floating-action-button"> como mostrado nos exemplos dessa página</a>+++.
+
+Comecei falando sobre frameworks CSS e vou deixar um aqui que comecei a usar, o +++<a href="http://materializecss.com/">Materialize</a>+++, pra você que já usou o Bootstrap vai sentir muita familiaridade nele, e se for usar em projetos menores talvez você se sinta como eu, mais motivado a aprender mais. Ou se você já se sente mais seguro sobre o MD, pode usar o +++<a href="http://www.getmdl.io/">Material Design Lite</a>+++ que funciona muito bem alinhado com o *AngularJS* mas fique a vontade para conferir a documentação de ambos e aplicar em seus projetos. Vale salientar que o MD foi criado para criar um padrão e existe muita pesquisa nele (comportamento, AIDA, UX), e como eu disse, *ele vai te ajudar a não pensar tanto em design*, mas na solução, isso pode ser redundante mas *o foco deve ser resolver* um problema e pode ter certeza que *a curva de aprendizado no uso da sua ferramenta vai ser muito menor* se você usar os princípios do Google Material Design.
